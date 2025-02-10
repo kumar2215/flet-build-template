@@ -9,6 +9,10 @@
         <key>{{ cookiecutter.bundle_id }}</key>
         <string>{{ cookiecutter.ios_provisioning_profile }}</string>
     </dict>
+    {% if cookiecutter.ios_team_id %}
+    <key>teamID</key>
+    <string>{{ cookiecutter.ios_team_id }}</string>
+    {% endif %}
     {% macro render_dict(d) -%}
     {% for key, value in d.items() -%}
     <key>{{ key }}</key>

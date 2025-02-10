@@ -362,6 +362,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+{% if cookiecutter.ios_team_id %}				
+				DEVELOPMENT_TEAM = "{{ cookiecutter.ios_team_id }}";
+{% endif %}
 {% if cookiecutter.ios_provisioning_profile %}				
 				PROVISIONING_PROFILE_SPECIFIER = "{{ cookiecutter.ios_provisioning_profile }}";
 {% endif %}
@@ -544,6 +547,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+{% if cookiecutter.ios_team_id %}				
+				DEVELOPMENT_TEAM = "{{ cookiecutter.ios_team_id }}";
+{% endif %}
 {% if cookiecutter.ios_provisioning_profile %}				
 				PROVISIONING_PROFILE_SPECIFIER = "{{ cookiecutter.ios_provisioning_profile }}";
 {% endif %}
@@ -570,6 +576,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+{% if cookiecutter.ios_team_id %}				
+				DEVELOPMENT_TEAM = "{{ cookiecutter.ios_team_id }}";
+{% endif %}
 {% if cookiecutter.ios_provisioning_profile %}				
 				PROVISIONING_PROFILE_SPECIFIER = "{{ cookiecutter.ios_provisioning_profile }}";
 {% endif %}
