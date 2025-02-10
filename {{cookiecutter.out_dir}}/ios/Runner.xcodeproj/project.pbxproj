@@ -365,6 +365,9 @@
 {% if cookiecutter.ios_team_id %}				
 				DEVELOPMENT_TEAM = "{{ cookiecutter.ios_team_id }}";
 {% endif %}
+{% if cookiecutter.ios_signing_certificate %}				
+				CODE_SIGN_IDENTITY = "{{ cookiecutter.ios_signing_certificate }}";
+{% endif %}
 {% if cookiecutter.ios_provisioning_profile %}				
 				PROVISIONING_PROFILE_SPECIFIER = "{{ cookiecutter.ios_provisioning_profile }}";
 {% endif %}
@@ -550,6 +553,9 @@
 {% if cookiecutter.ios_team_id %}				
 				DEVELOPMENT_TEAM = "{{ cookiecutter.ios_team_id }}";
 {% endif %}
+{% if cookiecutter.ios_signing_certificate %}				
+				CODE_SIGN_IDENTITY = "{{ cookiecutter.ios_signing_certificate }}";
+{% endif %}
 {% if cookiecutter.ios_provisioning_profile %}				
 				PROVISIONING_PROFILE_SPECIFIER = "{{ cookiecutter.ios_provisioning_profile }}";
 {% endif %}
@@ -578,6 +584,9 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 {% if cookiecutter.ios_team_id %}				
 				DEVELOPMENT_TEAM = "{{ cookiecutter.ios_team_id }}";
+{% endif %}
+{% if cookiecutter.ios_signing_certificate %}				
+				CODE_SIGN_IDENTITY = "{{ cookiecutter.ios_signing_certificate }}";
 {% endif %}
 {% if cookiecutter.ios_provisioning_profile %}				
 				PROVISIONING_PROFILE_SPECIFIER = "{{ cookiecutter.ios_provisioning_profile }}";
