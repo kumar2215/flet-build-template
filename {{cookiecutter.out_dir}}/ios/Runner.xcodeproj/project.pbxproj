@@ -270,7 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"EXPANDED_CODE_SIGN_IDENTITY: $EXPANDED_CODE_SIGN_IDENTITY\"\necho \"EXPANDED_CODE_SIGN_IDENTITY_NAME: $EXPANDED_CODE_SIGN_IDENTITY_NAME\"\necho \"CODESIGNING_FOLDER_PATH: $CODESIGNING_FOLDER_PATH\"\n";
+			shellScript = "if [ -n \"$EXPANDED_CODE_SIGN_IDENTITY\" ]; then\n echo \"Signing frameworks as $EXPANDED_CODE_SIGN_IDENTITY_NAME ($EXPANDED_CODE_SIGN_IDENTITY)...\"\n find \"$CODESIGNING_FOLDER_PATH/Frameworks\" -name \"*.framework\" -exec /usr/bin/codesign --force --sign \"$EXPANDED_CODE_SIGN_IDENTITY\" ${OTHER_CODE_SIGN_FLAGS:-} -o runtime --timestamp=none --preserve-metadata=identifier,entitlements,flags --generate-entitlement-der \"{}\" \\;\n else\n echo \"Skipping framework signing: EXPANDED_CODE_SIGN_IDENTITY is empty.\"\n fi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
