@@ -59,6 +59,7 @@ android {
 // flet: split_per_abi {% if not cookiecutter.split_per_abi %}
         ndk {
             abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64'
+            debugSymbolLevel 'none'
         }
 // flet: end of split_per_abi {% endif %}
     }
@@ -76,11 +77,10 @@ android {
 
     buildTypes {
         release {
-// flet: android_signing {% if cookiecutter.options.android_signing %}
             signingConfig signingConfigs.release
-// {% else %}
-//             signingConfig signingConfigs.debug
-// flet: end of android_signing {% endif %}
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }

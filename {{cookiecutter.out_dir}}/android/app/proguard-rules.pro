@@ -1,0 +1,2 @@
+-keep class com.kumaraguru.ciphergrid.** { *; }
+-dontwarn com.kumaraguru.ciphergrid.**
