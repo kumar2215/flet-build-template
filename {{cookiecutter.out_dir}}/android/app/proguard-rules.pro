@@ -1,2 +1,5 @@
+-dontwarn **
 -keep class com.kumaraguru.ciphergrid.** { *; }
--dontwarn com.kumaraguru.ciphergrid.**
+-keep class io.flutter.** { *; }
+-keep class androidx.** { *; }
+-keep class org.python.** { *; }
